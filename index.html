@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BOTON Himbigbé Désiré</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-transition bg-white text-gray-900">
+    
+    <!-- Navbar fixe -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg theme-transition">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <div class="bg-blak-500 px-6 py-2 rounded-lg font-bold text-white text-xl shadow-lg hover:scale-105 transition-all cursor-pointer overflow-hidden">
+                        <img src="images/logo.png" alt="Logo" class="h-8 w-auto object-contain" onerror="this.parentElement.innerHTML='LOGO'">
+                    </div>
+                    
+                    <div class="hidden lg:flex items-center gap-4">
+                        <button onclick="showPage('home')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>🏠</span> Accueil
+                        </button>
+                        <button onclick="showPage('about')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>👤</span> À Propos
+                        </button>
+                        <button onclick="showPage('projects')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>💼</span> Projets
+                        </button>
+                        <button onclick="showPage('skills')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>⚡</span> Compétences
+                        </button>
+                        <button onclick="showPage('experience')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>🏆</span> Expériences
+                        </button>
+                        <button onclick="showPage('cv')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>📄</span> CV
+                        </button>
+                        <button onclick="showPage('certificates')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>🎓</span> Certificats
+                        </button>
+                        <button onclick="showPage('story')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>📖</span> Mon Histoire
+                        </button>
+                        <button onclick="showPage('contact')" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all">
+                            <span>✉️</span> Contact
+                        </button>
+                    </div>
+                </div>
+
+                <button onclick="toggleTheme()" class="bg-blue-500 hover:bg-blue-700 p-3 rounded-full text-white shadow-lg hover:scale-110 hover:rotate-180 transition-all duration-500">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Accueil -->
+    <div id="home" class="page active min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate-slide-in">
+                    <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
+                        BOTON Himbigbé Désiré
+                    </h1>
+                    <p class="text-xl text-gray-600">
+                    <p style="text-align: center;">Etudiant en Mathématique Informatique || Développeur Full Stack (Python) || Futur Ingénieur en Cybersécurité 
+                    || CTF Player || Graphisme Design || Expérience en IA & en Électronique.</p>
+                    </p>
+                    <div class="flex gap-4 animate-bounce-in">
+                        <button onclick="showPage('projects')" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transform hover:scale-105 transition-all shadow-lg">
+                            Voir mes projets
+                        </button>
+                        <button onclick="showPage('contact')" class="border-2 border-blue-500 text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transform hover:scale-105 transition-all">
+                            Me contacter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center animate-float">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-blue-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition-all animate-pulse"></div>
+                        <div class="relative w-64 h-64 bg-gray-100 rounded-full flex items-center justify-center border-4 border-blue-500 overflow-hidden transform group-hover:scale-110 transition-all shadow-2xl">
+                             <img src="images/image.jpeg" alt="Profil" class="text-8xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page À Propos -->
+    <div id="about" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center animate-slide-down">À Propos de Moi</h2>
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-xl space-y-6 animate-scale-in">
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    <p style="text-align: justify;">
+                    Passionné par la technologie et l'innovation, je suis un professionnel polyvalent avec une expertise approfondie 
+                    en développement web, cybersécurité, intelligence artificielle et électronique.
+                    </p>
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    <p style="text-align: justify;">
+                     Mon parcours est marqué par une soif constante d'apprentissage et d'excellence. J'ai eu l'honneur de recevoir une bourse
+                     de Benin Excellence pour participer à l'école d'été sur l'intelligence artificielle, et j'ai acquis de nombreuses 
+                     certifications internationales dans le domaine de la cybersécurité.
+                    </p>
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    <p style="text-align: justify;">
+                    Au laboratoire de Benin Excellence, j'ai développé mes compétences en électronique et participé à de nombreux 
+                    projets innovants. En tant qu'autodidacte passionné, je continue d'approfondir mes connaissances à travers 
+                    diverses formations et documentations professionnelles.
+                    </p>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Projets -->
+    <div id="projects" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mes Projets</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-50 bg-gradient-to-br  rounded-lg mb-4 flex items-center justify-center">
+                        <img src="images/ayideyi.png" class="h-50 w-auto object-contain flex items-center justify-center ">
+                        <div class="bg-blue-0 px-0 py-0 rounded-lg font-bold text-white text-xl shadow-lg hover:scale-105 transition-all cursor-pointer overflow-hidden">
+                    </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 1: Devélloppement de L'API AHIDEYI</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold" >
+                        <a href="projet1_details.html">Voir plus →</a>
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 2: Programmation d'une voiture intelligente.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 3: Programmation des feux tricolores.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 4: Système de reconnaissance faciale.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 5: Jeux de morpion avec bras Robotique.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 6: Système PDF Translator Book.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-50 bg-gradient-to-br rounded-lg mb-4 flex items-center justify-center">
+                    <img src="images/supermarcher.png" class="h-50 w-auto object-contain">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold mb-2">Projet 7: Système de facturation Super_Marché Anu_Oluwa.</h3>
+                        <p class="text-gray-400">Description du projet ...</p>
+                        <button class="mt-4 text-blue-500 hover:text-blue-600 inline-flex items-center gap-2 font-semibold">
+                            <a href="projet7_details.html">Voir plus →</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 8: Sytème de Gestion de Stock.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 9: Sytème d'identication de sexe à base du prénom.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 10: Gestion d'information par un code QR.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 11: Outil de monitoring de sécurité.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-6xl">💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Projet 12: Programmation KOBOLD.</h3>
+                    <p class="text-gray-600">Description du projet ...</p>
+                    <button class="mt-4 text-blue-500 hover:text-blue-600 flex items-center gap-2 font-semibold">
+                        Voir plus →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Compétences -->
+    <div id="skills" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mes Compétences</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all animate-slide-in">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-blue-500 p-3 rounded-lg">
+                            <span class="text-3xl">🌐</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Développement Web</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Frontend (HTML, CSS, JavaScript, React)</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Backend (Node.js, PHP, Python)</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Bases de données (MySQL, MongoDB)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all animate-slide-in">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-red-500 p-3 rounded-lg">
+                            <span class="text-3xl">🛡️</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Cybersécurité</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Analyse de vulnérabilités</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>CEH (Certified Ethical Hacker)</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>OSINT</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Pentest & Audit de sécurité</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Certifications Udemy ...</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all animate-slide-in">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-purple-500 p-3 rounded-lg">
+                            <span class="text-3xl">🤖</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Intelligence Artificielle</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Machine Learning</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Deep Learning</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>École d'été IA - Bourse Benin Excellence</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Traitement de données</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all animate-slide-in">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-green-500 p-3 rounded-lg">
+                            <span class="text-3xl">⚡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Électronique</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Conception des Technologies</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Conception de circuits</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Prototypage</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all animate-slide-in md:col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="bg-yellow-500 p-3 rounded-lg">
+                            <span class="text-3xl">📝</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">SEO & Rédaction Web</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Optimisation SEO</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Rédaction de contenu</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-blue-500 mt-1">▸</span>
+                            <span>Marketing digital</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 class="text-3xl font-bold mb-6 text-center">Compétences Supplémentaires</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300 hover:border-blue-500 transition-all animate-bounce-in">
+                    <h4 class="text-xl font-bold mb-4 text-center">Compétence 1</h4>
+                    <p class="text-gray-600 text-center">À ajouter...</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300 hover:border-blue-500 transition-all animate-bounce-in">
+                    <h4 class="text-xl font-bold mb-4 text-center">Compétence 2</h4>
+                    <p class="text-gray-600 text-center">À ajouter...</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-2 border-dashed border-gray-300 hover:border-blue-500 transition-all animate-bounce-in">
+                    <h4 class="text-xl font-bold mb-4 text-center">Compétence 3</h4>
+                    <p class="text-gray-600 text-center">À ajouter...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Expériences -->
+    <div id="experience" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mes Expériences</h2>
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 1</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 2</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 3</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 4</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 5</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 6</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 7</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all animate-fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏆</span>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-600 text-center">Photo 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page CV -->
+    <div id="cv" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mon CV</h2>
+            <div class="bg-gray-50 p-12 rounded-2xl shadow-xl animate-scale-in">
+                <div class="text-center mb-8">
+                    <span class="text-8xl mb-4 block">📄</span>
+                    <p class="text-lg text-gray-600 mb-6">Téléchargez mon CV complet</p>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 mx-auto transform hover:scale-105 transition-all shadow-lg">
+                        <span>⬇️</span>
+                        Télécharger le CV
+                    </button>
+                </div>
+                <div class="border-t-2 border-dashed border-blue-500/30 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold mb-4">Aperçu du CV</h3>
+                    <p class="text-gray-600">Votre CV sera affiché ici ou disponible en téléchargement...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Certificats -->
+    <div id="certificates" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mes Certificats</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">CEH</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">OSINT</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Udemy - Cybersécurité</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">IA - Benin Excellence</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Électronique</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-rotate-in">
+                    <div class="h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-7xl z-10">🎓</span>
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                    <p class="text-gray-600 text-sm">Certificat obtenu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Histoire -->
+    <div id="story" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Mon Histoire</h2>
+            <div class="space-y-8">
+                <div class="flex gap-6 animate-slide-in">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-500 p-4 rounded-full shadow-lg">
+                            <span class="text-2xl">❤️</span>
+                        </div>
+                        <div class="w-1 h-full bg-blue-500/30 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg flex-1 transform hover:scale-105 transition-all">
+                        <span class="text-blue-500 font-bold text-sm">Naissance</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Les Débuts</h3>
+                        <p class="text-gray-600">
+                            Ajoutez ici votre histoire personnelle pour cette période...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 animate-slide-in">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-500 p-4 rounded-full shadow-lg">
+                            <span class="text-2xl">📖</span>
+                        </div>
+                        <div class="w-1 h-full bg-blue-500/30 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg flex-1 transform hover:scale-105 transition-all">
+                        <span class="text-blue-500 font-bold text-sm">Enfance</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Premières Passions</h3>
+                        <p class="text-gray-600">
+                            Ajoutez ici votre histoire personnelle pour cette période...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 animate-slide-in">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-500 p-4 rounded-full shadow-lg">
+                            <span class="text-2xl">💻</span>
+                        </div>
+                        <div class="w-1 h-full bg-blue-500/30 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg flex-1 transform hover:scale-105 transition-all">
+                        <span class="text-blue-500 font-bold text-sm">Adolescence</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Découverte de la Tech</h3>
+                        <p class="text-gray-600">
+                            Ajoutez ici votre histoire personnelle pour cette période...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 animate-slide-in">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-500 p-4 rounded-full shadow-lg">
+                            <span class="text-2xl">🏆</span>
+                        </div>
+                        <div class="w-1 h-full bg-blue-500/30 mt-2"></div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg flex-1 transform hover:scale-105 transition-all">
+                        <span class="text-blue-500 font-bold text-sm">Formation</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Développement des Compétences</h3>
+                        <p class="text-gray-600">
+                            Ajoutez ici votre histoire personnelle pour cette période...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 animate-slide-in">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-500 p-4 rounded-full shadow-lg">
+                            <span class="text-2xl">💼</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg flex-1 transform hover:scale-105 transition-all">
+                        <span class="text-blue-500 font-bold text-sm">Aujourd'hui</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3">Professionnel Accompli</h3>
+                        <p class="text-gray-600">
+                            Ajoutez ici votre histoire personnelle pour cette période...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Contact -->
+    <div id="contact" class="page min-h-screen py-20 px-6 pt-32">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center animate-slide-down">Contactez-moi</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-xl animate-slide-in">
+                    <h3 class="text-2xl font-bold mb-6">Formulaire de Contact</h3>
+                    <div class="space-y-4">
+                        <input
+                            type="text"
+                            placeholder="Nom"
+                            class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 border border-gray-200 focus:border-blue-500 focus:outline-none transition-all"
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 border border-gray-200 focus:border-blue-500 focus:outline-none transition-all"
+                        />
+                        <textarea
+                            placeholder="Message"
+                            rows="5"
+                            class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 border border-gray-200 focus:border-blue-500 focus:outline-none transition-all"
+                        ></textarea>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold w-full transform hover:scale-105 transition-all shadow-lg">
+                            Envoyer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="space-y-6 animate-slide-in">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Coordonnées</h3>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 flex items-center gap-3">
+                                <span>✉️</span>
+                                <a href="mailto:botonhdesire@gmail.com">botonhdesire@gmail.com</a>
+                            </p>
+                            <p class="text-gray-600 flex items-center gap-3">
+                                <span>🌍</span>
+                                Bénin, Porto-Novo
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Réseaux Sociaux</h3>
+                        <div class="grid grid-cols-3 gap-4">
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">💻</span>
+                                <span class="text-xs">GitHub</span>
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">💼</span>
+                                <span class="text-xs">LinkedIn</span>
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">🐦</span>
+                                <span class="text-xs">Twitter</span>
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">📘</span>
+                                <span class="text-xs">Facebook</span>
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">📸</span>
+                                <span class="text-xs">Instagram</span>
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 p-4 rounded-lg flex flex-col items-center gap-2 transform hover:scale-110 transition-all">
+                                <span class="text-2xl">📘</span>
+                                <span class="text-xs">Wathsap</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="lg:hidden fixed bottom-0 left-0 right-0 z-50">
+        <div class="bg-white/95 backdrop-blur-md shadow-2xl theme-transition">
+            <div class="flex justify-around py-2">
+                <button onclick="showPage('home')" class="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all text-gray-600">
+                    <span>🏠</span>
+                    <span class="text-xs">Accueil</span>
+                </button>
+                <button onclick="showPage('about')" class="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all text-gray-600">
+                    <span>👤</span>
+                    <span class="text-xs">À Propos</span>
+                </button>
+                <button onclick="showPage('projects')" class="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all text-gray-600">
+                    <span>💼</span>
+                    <span class="text-xs">Projets</span>
+                </button>
+                <button onclick="showPage('skills')" class="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all text-gray-600">
+                    <span>⚡</span>
+                    <span class="text-xs">Compétences</span>
+                </button>
+                <button onclick="showPage('contact')" class="flex flex-col items-center gap-1 px-3 py-2 rounded-lg transition-all text-gray-600">
+                    <span>✉️</span>
+                    <span class="text-xs">Contact</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

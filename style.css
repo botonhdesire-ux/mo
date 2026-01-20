@@ -1,0 +1,447 @@
+/* Animations CSS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateX(-50px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes slideDown {
+    from { 
+        transform: translateY(-50px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes bounceIn {
+    0% { 
+        transform: scale(0.5); 
+        opacity: 0; 
+    }
+    50% { 
+        transform: scale(1.1); 
+    }
+    100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+@keyframes scaleIn {
+    from { 
+        transform: scale(0.8); 
+        opacity: 0; 
+    }
+    to { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInUp {
+    from { 
+        transform: translateY(30px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes rotateIn {
+    from { 
+        transform: rotate(-10deg) scale(0.8); 
+        opacity: 0; 
+    }
+    to { 
+        transform: rotate(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+/* Application des animations */
+.animate-fade-in { 
+    animation: fadeIn 0.8s ease-out; 
+}
+
+.animate-slide-in { 
+    animation: slideIn 0.8s ease-out; 
+}
+
+.animate-slide-down { 
+    animation: slideDown 0.8s ease-out; 
+}
+
+.animate-bounce-in { 
+    animation: bounceIn 0.8s ease-out; 
+}
+
+.animate-float { 
+    animation: float 3s ease-in-out infinite; 
+}
+
+.animate-scale-in { 
+    animation: scaleIn 0.8s ease-out; 
+}
+
+.animate-fade-in-up { 
+    animation: fadeInUp 0.8s ease-out; 
+}
+
+.animate-rotate-in { 
+    animation: rotateIn 0.8s ease-out; 
+}
+
+/* Gestion des pages */
+.page { 
+    display: none; 
+}
+
+.page.active { 
+    display: block; 
+}
+
+/* Transitions de thème */
+.theme-transition {
+    transition: all 0.5s ease;
+}
+
+/* Mode sombre */
+body.dark {
+    background-color: #111827;
+    color: white;
+}
+
+body.dark #navbar {
+    background-color: rgba(31, 41, 55, 0.95);
+}
+
+body.dark .bg-gray-50 {
+    background-color: #1f2937;
+}
+
+body.dark .text-gray-600 {
+    color: #d1d5db;
+}
+
+body.dark .text-gray-900 {
+    color: #f9fafb;
+}
+
+body.dark .border-gray-200 {
+    border-color: #374151;
+}
+
+body.dark .bg-white {
+    background-color: #111827;
+}
+
+/* Responsive design supplémentaire */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-7xl {
+        font-size: 3.5rem;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+body.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+}
+
+/* Effets de hover personnalisés */
+.nav-btn:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.nav-btn.active {
+    background-color: #3b82f6;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+/* Animation au chargement de la page */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page.active {
+    animation: pageLoad 0.6s ease-out;
+}
+
+/* Effet de gradient animé sur le titre */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-gradient-to-r {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Bouton avec effet de ripple */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Focus states pour l'accessibilité */
+input:focus, 
+textarea:focus, 
+button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Loader pour les transitions */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Text selection personnalisé */
+::selection {
+    background-color: #3b82f6;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    nav, .menu-mobile {
+        display: none !important;
+    }
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+    nav {
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Grid responsive */
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations délayées pour les éléments de liste */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+/* Effet de glow */
+.glow {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                0 0 20px rgba(59, 130, 246, 0.3),
+                0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+/* Effet parallax subtil */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Image overlay */
+.img-overlay {
+    position: relative;
+}
+
+.img-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-overlay:hover::after {
+    opacity: 1;
+}
+
+/* Mobile menu animation */
+@media (max-width: 1024px) {
+    .mobile-menu {
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu.active {
+        transform: translateY(0);
+    }
+}
+
+/* Glassmorphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+body.dark .skeleton {
+    background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+    background-size: 200% 100%;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+}
